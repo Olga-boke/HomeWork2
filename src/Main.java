@@ -8,7 +8,7 @@ public class Main {
         float box = 15.25f;
         double Box = 17.541;
         char apple =35;
-        boolean menInAdult = men > 10;
+        boolean menInAdult = men > 6;
         System.out.println( menInAdult );
 
         // Задание 2
@@ -30,7 +30,7 @@ public class Main {
         int eggs = 4;
         int eggsWeight = 70;
         int allWeight = bananas * weightBananas + milk * weightMilk + icecream * icecreamWeight + eggs * eggsWeight;
-        double allWeintKG = allWeight / 1000.0;
+        double allWeintKG = allWeight / (1000 * 1.0);
         System.out.println(" Вес всего завтрака " + allWeight + " грамм ");
         System.out.println( " Вес всего завтрака " + allWeintKG + " кг ");
 
@@ -41,24 +41,31 @@ public class Main {
         double allLoseWeingGr = allLoseWeinghtKg * 1000.0;
         double day1 = allLoseWeingGr / dayLoseWeinghtGr1;
         double day2 = allLoseWeingGr / dayLoseWeinghtGr2;
-        double averageDay = (day1 + day2) / 2;
+        double averageDay = (day1 + day2) / (2 * 1.0);
         System.out.println(" В среднем надо " + averageDay + " день для похудения ");
 
         // Задание 5
 
-        int masha1 = 67_760;
-        int denis1 = 83_690;
-        int kristina1 = 76_230;
-        double masha2 = masha1 / 100.0 * 10.0;
-        double denis2 = denis1 /100.0 *10.0;
-        double kristina2 = kristina1 /100.0 *10.0;
-        double increasedMasha = masha1 + masha2;
-        double increasedDenis = denis1 + denis2;
-        double increasedKristina = kristina1 + kristina2;
-        double differenceMasha = increasedMasha - masha1;
-        double differenceDenis = increasedDenis - denis1;
-        double differenceKristina = increasedKristina - kristina1;
-        System.out.println(" Кристина теперь получает " + increasedKristina + "рублей. Годовой доход вырос " + differenceKristina + " рублей ");
+        int precent = 10;
+        double multipler = precent / (100 * 1.0);
+
+        int mashaSalare = 67_760;
+        int denisSalare = 83_690;
+        int kristinaSelare = 76_230;
+        int masha2 = (int) (mashaSalare + (mashaSalare * multipler));
+        int denis2 = (int) (denisSalare + (denisSalare * multipler));
+        int kristina2 = (int) (kristinaSelare + (kristinaSelare * multipler));
+        int increasedMasha = masha2  - mashaSalare ;
+        int increasedDenis = denis2 - denisSalare;
+        int increasedKristina = kristina2 - kristinaSelare;
+        int differenceMasha = increasedMasha * 12;
+        int differenceDenis = increasedDenis * 12;
+        int differenceKristina = increasedKristina * 12;
+        System.out.println(" Кристина теперь получает " + kristina2 + "рублей. Годовой доход вырос " + differenceKristina + " рублей ");
+        System.out.println(increasedMasha);
+        System.out.println(kristina2);
+        System.out.println( increasedKristina);
+
 
     }
 }
